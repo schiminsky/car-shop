@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.portifolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  width: 1368px;
+  margin: 0 auto;
+
+  .port-right {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .portifolio-container {
+    display: flex;
+
+    img {
+      max-width: 800px;
+      border-radius: 10px;
+    }
+  }
+}

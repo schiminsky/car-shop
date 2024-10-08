@@ -1,17 +1,33 @@
+import React, { useEffect, useState } from 'react';
 import './styles.scss';
 
 function Header() {
+  const [isShrunk, setIsShrunk] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsShrunk(true);
+      } else {
+        setIsShrunk(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className='header'>
+    <div className={`header ${isShrunk ? 'shrink' : ''}`}>
       <div className='menus'>
-        <ul className='menu menu-1'>
-          <li className='carros'>Carros</li>
-          <li className='vans'>Vans</li>
-          <li className='motos'>Motos</li>
-        </ul>
-        <ul className='menu menu-2'>
-          <li className='Minha conta'>Minha conta</li>
-          <li className='Checkout'>Checkout</li>
+        <ul className='menu'>
+          <li className='link'>Quem Somos</li>
+          <li className='link'>Portfólio</li>
+          <li className='link'>Redes Sociais</li>
+          <li className='link'>Contato</li>
         </ul>
       </div>
     </div>

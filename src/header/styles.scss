@@ -4,20 +4,37 @@
 }
 
 .header {
-  height: 200px;
+  height: 100px;
   width: 100vw;
   background-color: azure;
+  display: flex;
+  position: fixed;
+  z-index: 999;
+  transition: height 0.3s ease;
+  top: 0px;
+
+  &.shrink {
+    height: 50px;
+  }
 
   .menus {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     gap: 50px;
+    width: 100vw;
+    height: 100%;
 
     ul {
+      display: flex;
+      justify-content: center;
+
       li {
-        width: fit-content;
-        min-width: -webkit-fill-available;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        list-style-type: none;
+        min-width: 200px;
       }
     }
   }
