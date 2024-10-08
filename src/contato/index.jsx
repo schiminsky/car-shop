@@ -2,9 +2,10 @@ import './styles.scss';
 
 function Contato () {
   return (
-    <div>
-      
-    </div>
+    <section id="contato" className="section">
+    <h2>Contato</h2>
+    <p>Informações de contato.</p>
+  </section>
   );
 }
 

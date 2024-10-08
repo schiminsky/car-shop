@@ -14,23 +14,33 @@ function Header() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
-    <div className={`header ${isShrunk ? 'shrink' : ''}`}>
-      <div className='menus'>
-        <ul className='menu'>
-          <li className='link'>Quem Somos</li>
-          <li className='link'>Portfólio</li>
-          <li className='link'>Redes Sociais</li>
-          <li className='link'>Contato</li>
-        </ul>
+    <>
+      <div className={`header ${isShrunk ? 'shrink' : ''}`}>
+        <div className='menus'>
+          <ul className='menu'>
+            <li className='link'>
+              <a href="#quem-somos">Quem Somos</a>
+            </li>
+            <li className='link'>
+              <a href="#portifolio">Portfólio</a>
+            </li>
+            <li className='link'>
+              <a href="#redes-sociais">Redes Sociais</a>
+            </li>
+            <li className='link'>
+              <a href="#contato">Contato</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

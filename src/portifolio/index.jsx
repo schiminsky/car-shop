@@ -2,11 +2,11 @@ import './styles.scss';
 
 function Portifolio () {
   return (
-    <div className='portifolio'>
+    <section id="portifolio" className='portifolio'>
       <h1>Portifolio</h1>
       <div className='portifolio-container'>
         <img src='https://via.placeholder.com/800x500?text=Portifolio 1' alt="Portifolio"/>
-        <div>
+        <div className='text'>
           <h2>
             Lorem ipsum
           </h2>
@@ -17,7 +17,7 @@ function Portifolio () {
       </div>
       <div className='portifolio-container port-right'>
         <img src='https://via.placeholder.com/800x500?text=Portifolio 2' alt="Portifolio"/>
-        <div>
+        <div className='text'>
           <h2>
             Lorem ipsum
           </h2>
@@ -28,7 +28,7 @@ function Portifolio () {
       </div>
       <div className='portifolio-container'>
         <img src='https://via.placeholder.com/800x500?text=Portifolio 3' alt="Portifolio"/>
-        <div>
+        <div className='text'>
           <h2>
             Lorem ipsum
           </h2>
@@ -37,7 +37,7 @@ function Portifolio () {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
